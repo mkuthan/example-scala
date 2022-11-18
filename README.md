@@ -1,0 +1,2 @@
+# example-scala
+Scala playground
