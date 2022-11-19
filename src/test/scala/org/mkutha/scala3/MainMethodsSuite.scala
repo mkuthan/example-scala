@@ -9,7 +9,7 @@ class MainMethodsSuite extends munit.FunSuite {
     Console.withOut(out) {
       happyNewYear()
     }
-    assertEquals(out.toString(), s"Happy New Year\n")
+    assertNoDiff(out.toString(), "Happy New Year")
   }
 
   def checkHappyBirthday(message: String, age: Int, name: String)(implicit loc: munit.Location): Unit =
@@ -18,7 +18,7 @@ class MainMethodsSuite extends munit.FunSuite {
       Console.withOut(out) {
         happyBirthday(age, name)
       }
-      assertEquals(out.toString(), s"$message\n")
+      assertNoDiff(out.toString(), message)
     }
 
   checkHappyBirthday("Happy 1st birthday, Adam", 1, "Adam")
@@ -31,6 +31,6 @@ class MainMethodsSuite extends munit.FunSuite {
     Console.withOut(out) {
       happyBirthday(3, "Kate", "Ann", "Bob")
     }
-    assertEquals(out.toString(), s"Happy 3rd birthday, Kate and Ann and Bob\n")
+    assertNoDiff(out.toString(), "Happy 3rd birthday, Kate and Ann and Bob")
   }
 }
