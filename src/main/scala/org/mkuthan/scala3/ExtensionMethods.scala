@@ -23,8 +23,8 @@ object ExtensionMethods {
 
   extension [T: Numeric](a: T)
     def add(b: T): T =
-      val numeric = summon[Numeric[T]]
-      numeric.plus(a, b)
+      val num = summon[Numeric[T]]
+      num.plus(a, b)
 
   extension [T](xs: List[T])
     def sumBy[U: Numeric](f: T => U): U =
