@@ -7,7 +7,7 @@ object Settings {
     scalacOptions := Seq(
       "-deprecation", // Emit warning and location for usages of deprecated APIs
       "-feature", // Emit warning and location for usages of features that should be imported explicitly
-      "-explaintypes", // Explain type errors in more detail
+      "-explain-types", // Explain type errors in more detail
       "-unchecked" // Enable additional warnings where generated code depends on assumptions
     )
   )
