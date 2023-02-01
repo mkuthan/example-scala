@@ -1,2 +1,2 @@
-# example-scala
-Scala playground
+# example-scala3
+Scala 3 playground
